@@ -11,6 +11,8 @@ ADS_24203
             |---->Node.hpp
             |---->Stack.hpp
                     |---->StackApp.hpp (for demo purpose - for each data type as and when required)
+        
+            |---->StackLimited
             |---->Queue.hpp
     |               ---->QueueApp.hpp  (for demo purpose - for each data type as and when required)
 
