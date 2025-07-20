@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/ADSA_24203.dir/main.cpp.o -o ADSA_24203

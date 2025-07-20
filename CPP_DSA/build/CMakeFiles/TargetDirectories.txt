@@ -1,0 +1,3 @@
+/home/adka/ADKA Files/Coding Files/DSA/C++/ADSA_24203/build/CMakeFiles/ADSA_24203.dir
+/home/adka/ADKA Files/Coding Files/DSA/C++/ADSA_24203/build/CMakeFiles/edit_cache.dir
+/home/adka/ADKA Files/Coding Files/DSA/C++/ADSA_24203/build/CMakeFiles/rebuild_cache.dir

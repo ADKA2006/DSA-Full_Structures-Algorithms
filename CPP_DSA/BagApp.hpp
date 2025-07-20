@@ -26,6 +26,7 @@ namespace Demo {
             } else {
                 cout << "Bag is not empty" << endl;
             }
+            cout << "=== Bag Complete ===" << endl;
         }
     };
 }

@@ -25,8 +25,7 @@ Stack<T>::Stack(){
 
 template <class T>
 void Stack<T>::push(T value){
-    Node<T>* newNode = new Node<T>();
-    newNode->data = value;
+    Node<T>* newNode = createNode(value);
     newNode->next = top;
     top = newNode;
     count++;

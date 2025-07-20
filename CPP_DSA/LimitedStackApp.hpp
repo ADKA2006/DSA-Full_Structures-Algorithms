@@ -14,16 +14,11 @@ namespace Demo {
             
             cout << "Created stack with limit: " << ls.getLimit() << endl;
             cout << "Initial size: " << ls.size() << endl;
-            cout << "Is empty? " << (ls.isEmpty() ? "Stack is empty" : "Stack is not empty") << endl;
-            cout << "Is full? " << (ls.isFull() ? "Stack is full" : "Stack is not full") << endl;
             
-            cout << "\nPushing elements within limit:" << endl;
             for (int i = 1; i <= 3; i++) {
-                cout << "Pushing: " << (i * 10) << endl;
                 ls.push(i * 10);
             }
-            
-            cout << "\nExceeding the limit" << endl;
+
             ls.push(40);  
             ls.push(50);  
             
@@ -48,7 +43,11 @@ namespace Demo {
                 cout << "Stack is not empty" << endl;
             }
             
+            cout << "Is empty? " << (ls.isEmpty() ? "Stack is empty" : "Stack is not empty") << endl;
+            cout << "Is full? " << (ls.isFull() ? "Stack is full" : "Stack is not full") << endl;
+
             cout << "=== Limited Stack Complete ===" << endl;
+
         }
     };
 }
