@@ -126,8 +126,8 @@ CMakeFiles/ADSA_24203.dir/main.cpp.o: \
  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/StackApp.hpp \
  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/Stack.hpp \
  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/Node.hpp \
- /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/LimitedStackApp.hpp \
- /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/LimitedStack.hpp \
+ /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/FixedSizeStackApp.hpp \
+ /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/FixedSizeStack.hpp \
  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/QueueApp.hpp \
  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/Queue.hpp \
  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/BagApp.hpp \

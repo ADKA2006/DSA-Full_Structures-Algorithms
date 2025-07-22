@@ -1,6 +1,6 @@
 #include <iostream>
 #include "StackApp.hpp"
-#include "LimitedStackApp.hpp"
+#include "FixedSizeStackApp.hpp"
 #include "QueueApp.hpp"
 #include "BagApp.hpp"
 using namespace std;
@@ -11,7 +11,7 @@ int main() {
 
     BagApp::run();            //Bag
     StackApp::run();          //Stack
-    LimitedStackApp::run();   //Limited Stack
+    FixedSizeStackApp::run();   //Fixed Size Stack
     QueueApp::run();          //Queue
 
 

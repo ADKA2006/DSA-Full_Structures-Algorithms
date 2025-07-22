@@ -12,8 +12,8 @@ set(HEADERS
     Node.hpp
     Stack.hpp
     StackApp.hpp
-    LimitedStack.hpp
-    LimitedStackApp.hpp
+    FixedSizeStack.hpp
+    FixedSizeStackApp.hpp
     Queue.hpp
     QueueApp.hpp
     Bag.hpp

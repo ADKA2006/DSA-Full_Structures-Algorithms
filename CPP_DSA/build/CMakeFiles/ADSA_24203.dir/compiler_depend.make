@@ -4,8 +4,8 @@
 CMakeFiles/ADSA_24203.dir/main.cpp.o: /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/main.cpp \
   /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/Bag.hpp \
   /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/BagApp.hpp \
-  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/LimitedStack.hpp \
-  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/LimitedStackApp.hpp \
+  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/FixedSizeStack.hpp \
+  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/FixedSizeStackApp.hpp \
   /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/Node.hpp \
   /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/Queue.hpp \
   /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/QueueApp.hpp \
@@ -338,6 +338,8 @@ CMakeFiles/ADSA_24203.dir/main.cpp.o: /home/adka/ADKA\ Files/Coding\ Files/DSA/C
 
 /usr/include/c++/14/bits/ptr_traits.h:
 
+/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/FixedSizeStackApp.hpp:
+
 /usr/include/c++/14/exception:
 
 /usr/include/bits/struct_rwlock.h:
@@ -362,9 +364,25 @@ CMakeFiles/ADSA_24203.dir/main.cpp.o: /home/adka/ADKA\ Files/Coding\ Files/DSA/C
 
 /usr/include/c++/14/bits/utility.h:
 
-/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/LimitedStackApp.hpp:
+/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/FixedSizeStack.hpp:
 
-/usr/include/bits/floatn.h:
+/usr/include/bits/stdio_lim.h:
+
+/usr/include/bits/types/__mbstate_t.h:
+
+/usr/include/bits/time.h:
+
+/usr/include/bits/byteswap.h:
+
+/usr/include/c++/14/bits/basic_ios.tcc:
+
+/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/StackApp.hpp:
+
+/usr/include/c++/14/initializer_list:
+
+/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/main.cpp:
+
+/usr/include/c++/14/bits/postypes.h:
 
 /usr/include/bits/struct_mutex.h:
 
@@ -390,24 +408,6 @@ CMakeFiles/ADSA_24203.dir/main.cpp.o: /home/adka/ADKA\ Files/Coding\ Files/DSA/C
 
 /usr/include/bits/long-double.h:
 
-/usr/include/bits/stdio_lim.h:
-
-/usr/include/bits/types/__mbstate_t.h:
-
-/usr/include/bits/time.h:
-
-/usr/include/bits/byteswap.h:
-
-/usr/include/c++/14/bits/basic_ios.tcc:
-
-/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/StackApp.hpp:
-
-/usr/include/c++/14/initializer_list:
-
-/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/main.cpp:
-
-/usr/include/c++/14/bits/postypes.h:
-
 /usr/include/features.h:
 
 /usr/include/bits/endianness.h:
@@ -422,6 +422,8 @@ CMakeFiles/ADSA_24203.dir/main.cpp.o: /home/adka/ADKA\ Files/Coding\ Files/DSA/C
 
 /usr/include/bits/floatn-common.h:
 
+/usr/include/bits/floatn.h:
+
 /usr/include/bits/libc-header-start.h:
 
 /usr/include/wctype.h:
@@ -433,8 +435,6 @@ CMakeFiles/ADSA_24203.dir/main.cpp.o: /home/adka/ADKA\ Files/Coding\ Files/DSA/C
 /usr/include/bits/typesizes.h:
 
 /usr/include/c++/14/bits/ostream.tcc:
-
-/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/LimitedStack.hpp:
 
 /usr/include/c++/14/x86_64-redhat-linux/bits/c++locale.h:
 
