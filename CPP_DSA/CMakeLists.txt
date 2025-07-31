@@ -16,6 +16,8 @@ set(HEADERS
     FixedSizeStackApp.hpp
     Queue.hpp
     QueueApp.hpp
+    PriorityQueue.hpp
+    PriorityQueueApp.hpp
     Bag.hpp
     BagApp.hpp
 )

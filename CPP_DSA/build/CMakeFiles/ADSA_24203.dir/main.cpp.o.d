@@ -123,6 +123,8 @@ CMakeFiles/ADSA_24203.dir/main.cpp.o: \
  /usr/include/c++/14/bits/basic_ios.tcc \
  /usr/include/c++/14/bits/ostream.tcc /usr/include/c++/14/istream \
  /usr/include/c++/14/bits/istream.tcc \
+ /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/BagApp.hpp \
+ /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/Bag.hpp \
  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/StackApp.hpp \
  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/Stack.hpp \
  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/Node.hpp \
@@ -130,5 +132,5 @@ CMakeFiles/ADSA_24203.dir/main.cpp.o: \
  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/FixedSizeStack.hpp \
  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/QueueApp.hpp \
  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/Queue.hpp \
- /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/BagApp.hpp \
- /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/Bag.hpp
+ /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/PriorityQueueApp.hpp \
+ /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/PriorityQueue.hpp
