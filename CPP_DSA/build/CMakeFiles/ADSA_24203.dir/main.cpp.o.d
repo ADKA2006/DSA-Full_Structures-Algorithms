@@ -133,4 +133,6 @@ CMakeFiles/ADSA_24203.dir/main.cpp.o: \
  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/QueueApp.hpp \
  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/Queue.hpp \
  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/PriorityQueueApp.hpp \
- /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/PriorityQueue.hpp
+ /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/PriorityQueue.hpp \
+ /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/SortArrayApp.hpp \
+ /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/SortArray.hpp

@@ -1,14 +1,14 @@
-#ifndef PriorityQueueApp_hpp
-#define PriorityQueueApp_hpp
+#ifndef SortArrayApp_hpp
+#define SortArrayApp_hpp
+#include "SortArray.hpp"
 #include "PriorityQueue.hpp"
-#include <iostream>
 using namespace std;
 
 namespace Demo {
-    class PriorityQueueApp {
+    class SortArrayApp {
         public:
         static void run() {
-            cout << "\n===Priority Queue===" << endl;
+            cout << "\n=== Sort Array using Priority Queue ===" << endl;
 
             struct Patient{
                 int value;
@@ -27,7 +27,6 @@ namespace Demo {
             }
 
             PriorityQueue<Patient> pq(maxPatients);
-            cout << "Example of inserting into the priority queue" << endl;
 
             for (int i = 0; i < maxPatients; i++) {
                 cout << "Enter the name of the Patient and Priority: " << endl;
@@ -39,25 +38,15 @@ namespace Demo {
                     cout << "Failed to add patient. Priority Queue is full." << endl;
                 }
             }
+            SortArray<Patient> sorter;
+            sorter.heapSort(pq);
 
-            Patient patient_max;
-            if (pq.getMax(patient_max)) {
-                cout << "The patient with the maximum priority is: " << patient_max.name << " with priority " << patient_max.priority << endl;
-            } else {
-                cout << "The priority queue is empty" << endl;
+            cout << "Sorted patients by priority:" << endl;
+            for(int i = 0; i< maxPatients; i++) {
+                    cout << "Patient " << pq.getItem(i).name << " with priority " << pq.getItem(i).priority << endl;
             }
 
-            cout << "The number of patients in the priority queue: " << pq.getCount() << endl;
-
-            cout << "\nExample of removing from the priority queue:" << endl;
-            Patient removedPatient;
-            while (pq.remove(removedPatient)) {
-                cout << "Removed patient: " << removedPatient.name << " with priority " << removedPatient.priority << endl;
-            }
-            cout << "No more patients to remove." << endl;
-
-            cout << "===Priority Queue Complete===" << endl;
-
+            cout << "=== Sort Array Complete ===" << endl;
         }
     };
 }

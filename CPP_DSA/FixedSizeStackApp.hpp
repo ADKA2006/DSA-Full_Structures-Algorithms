@@ -37,14 +37,8 @@ namespace Demo {
             
             cout << "Size of the stack is: " << fs.size() << endl;
             
-            if (fs.isEmpty()){
-                cout << "Stack is empty" << endl;
-            } else {
-                cout << "Stack is not empty" << endl;
-            }
-            
-            cout << "Is empty? " << (fs.isEmpty() ? "Stack is empty" : "Stack is not empty") << endl;
-            cout << "Is full? " << (fs.isFull() ? "Stack is full" : "Stack is not full") << endl;
+            cout << (fs.isEmpty() ? "Stack is empty" : "Stack is not empty") << endl;
+            cout << (fs.isFull() ? "Stack is full" : "Stack is not full") << endl;
 
             cout << "=== Fixed Size Stack Complete ===" << endl;
 

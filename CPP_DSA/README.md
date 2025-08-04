@@ -18,6 +18,8 @@ ADS_24203
                     |---->FixedSizeStackApp (for demo purpose - for each data type as and when required)
             |---->Queue.hpp
                     |---->QueueApp.hpp  (for demo purpose - for each data type as and when required)
+            |---->PriorityQueue.hpp
+                    |---->PriorityQueueApp.hpp  (for demo purpose - for each data type as and when required)
 '''
 
 A header file **Data Structure Name**.hpp is present which implements the logic for the Data Structure.
@@ -30,7 +32,7 @@ Another header file named **Data Structure Name App**.hpp is present where the f
 A ***main.cpp*** is present where the main function will import the header file **Data Structure Name App**.hpp and make call to Demo::**Data Structure Name**::run().
 
 
-The purpose of this organize to prevent the main function to get cluttered with code for different data structures as the library grows.
+The purpose of this organisation is to prevent the main function to get cluttered with code for different data structures as the library grows.
 
 The following is defined based on the array implementation
 '''

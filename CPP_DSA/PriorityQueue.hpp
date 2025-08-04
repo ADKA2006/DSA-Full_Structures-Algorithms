@@ -18,6 +18,11 @@ class PriorityQueue{
         ~PriorityQueue();
         bool insert(T ele);
         bool remove(T &ele);
+        bool getMax(T &ele);
+        int getCount();
+        T &getItem(int index) { return items[index]; }
+        void setCount(int newCount) { count = newCount; }
+        void callFixDown(int k) { fixDown(k); }
         //Swap the first element with the last element and then do fixDown on the root node(first element). And return the last element before calling the fixDown.
 };
 
@@ -91,6 +96,18 @@ bool PriorityQueue<T>::remove(T &ele) {
     count --;
     fixDown(0);
     return true;
+}
+
+template <class T>
+bool PriorityQueue<T>::getMax(T &ele) {
+    if (count == 0) return false;
+    ele = items[0];
+    return true;
+}
+
+template <class T>
+int PriorityQueue<T>::getCount() {
+    return count;
 }
 
 #endif

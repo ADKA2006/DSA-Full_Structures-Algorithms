@@ -4,6 +4,7 @@
 #include "FixedSizeStackApp.hpp"
 #include "QueueApp.hpp"
 #include "PriorityQueueApp.hpp"
+#include "SortArrayApp.hpp"
 
 using namespace std;
 using namespace Demo;  
@@ -16,6 +17,7 @@ int main() {
     FixedSizeStackApp::run();   //Fixed Size Stack
     QueueApp::run();          //Queue
     PriorityQueueApp::run(); //Priority Queue
+    SortArrayApp::run();
 
     
     cout << "\n=== xxxxxxxxxxxxxxxxxxxxxx ===" << endl;
