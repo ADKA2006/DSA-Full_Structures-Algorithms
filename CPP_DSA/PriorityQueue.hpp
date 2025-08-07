@@ -8,17 +8,17 @@ using namespace std;
 template <class T>
 class PriorityQueue{
     private:
-        int count;      //Number of elements
-        int capacity;   //Maximum number of elements
-        T *items;   // The elements which is stored as an array
+        int count;       //Number of elements
+        int capacity;    //Maximum number of elements
+        T *items;        // The elements which is stored as an array
         void fixUp(int k);
         void fixDown(int k);
     public:
         PriorityQueue(int max);
         ~PriorityQueue();
         bool insert(T ele);
-        bool remove(T &ele);
         bool getMax(T &ele);
+        bool peek(T &ele);
         int getCount();
         T &getItem(int index) { return items[index]; }
         void setCount(int newCount) { count = newCount; }
@@ -89,7 +89,7 @@ bool PriorityQueue<T>::insert(T ele) {
 }
 
 template <class T>
-bool PriorityQueue<T>::remove(T &ele) {
+bool PriorityQueue<T>::getMax(T &ele) {
     if (count == 0) return false;
     ele = items[0];
     items[0] = items[count - 1];
@@ -99,7 +99,7 @@ bool PriorityQueue<T>::remove(T &ele) {
 }
 
 template <class T>
-bool PriorityQueue<T>::getMax(T &ele) {
+bool PriorityQueue<T>::peek(T &ele) {
     if (count == 0) return false;
     ele = items[0];
     return true;

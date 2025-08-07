@@ -8,6 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(HEADERS
     Node.hpp
+    Heapify.hpp
     Stack.hpp
     StackApp.hpp
     FixedSizeStack.hpp
@@ -18,8 +19,10 @@ set(HEADERS
     PriorityQueueApp.hpp
     Bag.hpp
     BagApp.hpp
-    SortArray.hpp
-    SortArrayApp.hpp
+    HeapSort.hpp
+    HeapSortApp.hpp
+    HeapSortClass.hpp
+    HeapSortClassApp.hpp
 )
 
 set(SOURCES

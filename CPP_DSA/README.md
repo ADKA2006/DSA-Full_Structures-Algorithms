@@ -35,12 +35,20 @@ A ***main.cpp*** is present where the main function will import the header file 
 The purpose of this organisation is to prevent the main function to get cluttered with code for different data structures as the library grows.
 
 The following is defined based on the array implementation
+
 '''
+Priority Queue Note
 In priority queue we follow a head like structure where the value of node i will be greater the value of the node at 2*i+1 and 2*i+2. Such structres are called heap (while implementing we will be doing this in an array rather than creating a tree like structure.) So as we traverse the nodes will be sorted manner. The parent of a given node (k) is ***(k-1)/2***. 
 
 So in this case the worst case time will be only log(n) for insertion and for removing it will be O(1). In normal insertion using Array or linked list(without this head like behaviour) it will take O(n) for insetion and O(1) for removal (or virse versa depending on whether sorting is done during insertinon oor deletion) 
 
 If the array has n elements then h = floor[log_2(n)].
-'''
+
 
 For basic pratice consider a situtation where the node value is the priority ie this has to maintained to maintain heap like structure then code for the same is given in c++ pratice for now (later the logic will be given as a provate function of the api we are going to implement)
+'''
+
+'''
+Binary Tree Node
+Binary Tree is either empty or has to have node with *two* child node must which (ie from the node it again point (two) to a binary which are distinct..)Check the cpp for the practice node is
+'''

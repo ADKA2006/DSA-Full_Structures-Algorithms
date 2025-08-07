@@ -2,6 +2,7 @@
 #define Bag_H
 #include <iostream>
 #define N 1000   //Whenever we type N it will be 1000
+
 template <class T>
 class Bag{
     private:

@@ -6,13 +6,16 @@ CMakeFiles/ADSA_24203.dir/main.cpp.o: /home/adka/ADKA\ Files/Coding\ Files/DSA/C
   /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/BagApp.hpp \
   /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/FixedSizeStack.hpp \
   /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/FixedSizeStackApp.hpp \
+  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/HeapSort.hpp \
+  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/HeapSortApp.hpp \
+  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/HeapSortClass.hpp \
+  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/HeapSortClassApp.hpp \
+  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/Heapify.hpp \
   /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/Node.hpp \
   /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/PriorityQueue.hpp \
   /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/PriorityQueueApp.hpp \
   /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/Queue.hpp \
   /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/QueueApp.hpp \
-  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/SortArray.hpp \
-  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/SortArrayApp.hpp \
   /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/Stack.hpp \
   /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/StackApp.hpp \
   /usr/include/alloca.h \
@@ -264,6 +267,10 @@ CMakeFiles/ADSA_24203.dir/main.cpp.o: /home/adka/ADKA\ Files/Coding\ Files/DSA/C
 
 /usr/include/c++/14/bits/utility.h:
 
+/usr/include/gnu/stubs-64.h:
+
+/usr/include/c++/14/bits/stringfwd.h:
+
 /usr/include/bits/types/cookie_io_functions_t.h:
 
 /usr/include/bits/sched.h:
@@ -278,6 +285,10 @@ CMakeFiles/ADSA_24203.dir/main.cpp.o: /home/adka/ADKA\ Files/Coding\ Files/DSA/C
 
 /usr/include/c++/14/bits/cxxabi_init_exception.h:
 
+/usr/include/c++/14/bits/streambuf_iterator.h:
+
+/usr/include/bits/types/__FILE.h:
+
 /usr/include/bits/types/FILE.h:
 
 /usr/include/c++/14/bits/exception_ptr.h:
@@ -286,29 +297,19 @@ CMakeFiles/ADSA_24203.dir/main.cpp.o: /home/adka/ADKA\ Files/Coding\ Files/DSA/C
 
 /usr/include/c++/14/bits/locale_facets.tcc:
 
-/usr/include/gnu/stubs-64.h:
-
-/usr/include/c++/14/bits/stringfwd.h:
-
 /usr/include/bits/types.h:
 
 /usr/include/endian.h:
 
 /usr/include/c++/14/bits/localefwd.h:
 
-/usr/include/bits/types/error_t.h:
-
-/usr/include/bits/stdint-intn.h:
-
-/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/PriorityQueue.hpp:
-
-/usr/include/asm/errno.h:
-
 /usr/include/c++/14/system_error:
 
 /usr/include/c++/14/cstdlib:
 
 /usr/include/bits/endian.h:
+
+/usr/include/asm/errno.h:
 
 /usr/include/c++/14/bits/cxxabi_forced.h:
 
@@ -317,6 +318,12 @@ CMakeFiles/ADSA_24203.dir/main.cpp.o: /home/adka/ADKA\ Files/Coding\ Files/DSA/C
 /usr/include/bits/types/struct_timeval.h:
 
 /usr/include/c++/14/bits/stl_construct.h:
+
+/usr/include/bits/stdint-intn.h:
+
+/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/PriorityQueue.hpp:
+
+/usr/include/bits/types/error_t.h:
 
 /usr/include/bits/types/__fpos64_t.h:
 
@@ -330,15 +337,7 @@ CMakeFiles/ADSA_24203.dir/main.cpp.o: /home/adka/ADKA\ Files/Coding\ Files/DSA/C
 
 /usr/include/c++/14/bits/basic_ios.h:
 
-/usr/include/c++/14/new:
-
-/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/PriorityQueueApp.hpp:
-
-/usr/include/alloca.h:
-
-/usr/include/bits/types/locale_t.h:
-
-/usr/include/c++/14/bits/ptr_traits.h:
+/usr/include/bits/libc-header-start.h:
 
 /usr/include/gnu/stubs.h:
 
@@ -348,29 +347,65 @@ CMakeFiles/ADSA_24203.dir/main.cpp.o: /home/adka/ADKA\ Files/Coding\ Files/DSA/C
 
 /usr/include/c++/14/bits/invoke.h:
 
+/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/Heapify.hpp:
+
+/usr/include/bits/stdio_lim.h:
+
+/usr/include/bits/time.h:
+
+/usr/include/bits/types/__mbstate_t.h:
+
 /usr/include/c++/14/x86_64-redhat-linux/bits/c++locale.h:
 
 /usr/include/bits/pthread_stack_min-dynamic.h:
 
 /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/Node.hpp:
 
-/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/SortArrayApp.hpp:
+/usr/include/bits/setjmp.h:
 
-/usr/include/bits/floatn.h:
+/usr/include/bits/types/struct___jmp_buf_tag.h:
 
-/usr/include/bits/stdio_lim.h:
+/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/StackApp.hpp:
 
-/usr/include/bits/types/__mbstate_t.h:
+/usr/include/c++/14/initializer_list:
 
-/usr/include/bits/time.h:
+/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/main.cpp:
+
+/usr/include/c++/14/bits/postypes.h:
+
+/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/FixedSizeStackApp.hpp:
+
+/usr/include/c++/14/bits/stl_iterator_base_types.h:
+
+/usr/include/alloca.h:
+
+/usr/include/c++/14/new:
+
+/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/PriorityQueueApp.hpp:
+
+/usr/include/bits/types/__sigset_t.h:
+
+/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/HeapSort.hpp:
+
+/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/FixedSizeStack.hpp:
 
 /usr/include/bits/byteswap.h:
 
 /usr/include/c++/14/bits/basic_ios.tcc:
 
-/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/FixedSizeStackApp.hpp:
+/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/HeapSortApp.hpp:
 
-/usr/include/bits/types/__sigset_t.h:
+/usr/include/bits/locale.h:
+
+/usr/include/bits/long-double.h:
+
+/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/Stack.hpp:
+
+/usr/include/c++/14/ios:
+
+/usr/include/c++/14/bits/streambuf.tcc:
+
+/usr/include/c++/14/bits/locale_facets.h:
 
 /usr/include/locale.h:
 
@@ -379,18 +414,6 @@ CMakeFiles/ADSA_24203.dir/main.cpp.o: /home/adka/ADKA\ Files/Coding\ Files/DSA/C
 /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/QueueApp.hpp:
 
 /usr/include/c++/14/bits/locale_classes.tcc:
-
-/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/FixedSizeStack.hpp:
-
-/usr/include/c++/14/initializer_list:
-
-/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/main.cpp:
-
-/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/StackApp.hpp:
-
-/usr/include/c++/14/bits/postypes.h:
-
-/usr/include/bits/types/struct___jmp_buf_tag.h:
 
 /usr/include/bits/types/clock_t.h:
 
@@ -420,29 +443,9 @@ CMakeFiles/ADSA_24203.dir/main.cpp.o: /home/adka/ADKA\ Files/Coding\ Files/DSA/C
 
 /usr/include/c++/14/bits/exception.h:
 
-/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/Stack.hpp:
-
-/usr/include/c++/14/ios:
-
-/usr/include/c++/14/bits/streambuf.tcc:
-
-/usr/include/c++/14/bits/locale_facets.h:
-
-/usr/include/bits/long-double.h:
-
-/usr/include/bits/setjmp.h:
-
-/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/SortArray.hpp:
-
 /usr/include/features.h:
 
 /usr/include/bits/endianness.h:
-
-/usr/include/bits/types/__FILE.h:
-
-/usr/include/c++/14/bits/streambuf_iterator.h:
-
-/usr/include/bits/locale.h:
 
 /usr/include/wctype.h:
 
@@ -450,11 +453,15 @@ CMakeFiles/ADSA_24203.dir/main.cpp.o: /home/adka/ADKA\ Files/Coding\ Files/DSA/C
 
 /usr/include/bits/errno.h:
 
-/usr/include/bits/types/mbstate_t.h:
-
 /usr/include/bits/floatn-common.h:
 
-/usr/include/bits/libc-header-start.h:
+/usr/include/bits/floatn.h:
+
+/usr/include/c++/14/bits/ptr_traits.h:
+
+/usr/include/bits/types/locale_t.h:
+
+/usr/include/bits/types/mbstate_t.h:
 
 /usr/include/c++/14/bits/move.h:
 
@@ -486,6 +493,8 @@ CMakeFiles/ADSA_24203.dir/main.cpp.o: /home/adka/ADKA\ Files/Coding\ Files/DSA/C
 
 /usr/include/c++/14/bits/locale_classes.h:
 
+/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/HeapSortClassApp.hpp:
+
 /usr/include/c++/14/bits/functional_hash.h:
 
 /usr/include/bits/types/timer_t.h:
@@ -499,6 +508,8 @@ CMakeFiles/ADSA_24203.dir/main.cpp.o: /home/adka/ADKA\ Files/Coding\ Files/DSA/C
 /usr/include/c++/14/bits/range_access.h:
 
 /usr/include/bits/timesize.h:
+
+/home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/HeapSortClass.hpp:
 
 /usr/include/bits/waitstatus.h:
 
@@ -573,5 +584,3 @@ CMakeFiles/ADSA_24203.dir/main.cpp.o: /home/adka/ADKA\ Files/Coding\ Files/DSA/C
 /usr/include/c++/14/ext/numeric_traits.h:
 
 /usr/include/c++/14/bits/stl_iterator_base_funcs.h:
-
-/usr/include/c++/14/bits/stl_iterator_base_types.h:
