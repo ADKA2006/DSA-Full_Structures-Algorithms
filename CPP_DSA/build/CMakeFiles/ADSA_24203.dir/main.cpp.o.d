@@ -134,8 +134,8 @@ CMakeFiles/ADSA_24203.dir/main.cpp.o: \
  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/Queue.hpp \
  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/PriorityQueueApp.hpp \
  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/PriorityQueue.hpp \
- /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/HeapSortApp.hpp \
- /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/HeapSort.hpp \
- /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/HeapSortClassApp.hpp \
- /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/HeapSortClass.hpp \
- /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/Heapify.hpp
+ /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/HeapSortBottomUpApp.hpp \
+ /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/HeapSortBottomUp.hpp \
+ /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/Heapify.hpp \
+ /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/HeapSortTopDownApp.hpp \
+ /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/HeapSortTopDown.hpp

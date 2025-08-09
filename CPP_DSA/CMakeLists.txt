@@ -19,10 +19,10 @@ set(HEADERS
     PriorityQueueApp.hpp
     Bag.hpp
     BagApp.hpp
-    HeapSort.hpp
-    HeapSortApp.hpp
-    HeapSortClass.hpp
-    HeapSortClassApp.hpp
+    HeapSortBottomUp.hpp
+    HeapSortBottomUpApp.hpp
+    HeapSortTopDown.hpp
+    HeapSortTopDownApp.hpp
 )
 
 set(SOURCES

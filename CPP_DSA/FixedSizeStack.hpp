@@ -7,7 +7,7 @@ using namespace std;
 template <class T>
 class FixedSizeStack{
     private:
-        Node<T>* top;
+        Node<T> *top;
         int count;
         int limit; // Stack limit to prevent overflow
     public:

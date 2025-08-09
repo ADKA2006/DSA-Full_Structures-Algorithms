@@ -50,5 +50,8 @@ For basic pratice consider a situtation where the node value is the priority ie 
 
 '''
 Binary Tree Node
-Binary Tree is either empty or has to have node with *two* child node must which (ie from the node it again point (two) to a binary which are distinct..)Check the cpp for the practice node is
+Binary Tree is either empty or has to have node with *two* child node must which (ie from the node it again point (two) to a binary which are distinct..)Check the cpp for the practice node is.
+
+
+For binary search tree we make use of the binary tree. The left node should be less than the parent node and also the right node has to be greater than the parent. So while searching we are making use of the ideas of binary serch where if the givern value is less than that node we onloy have to search on the lest node and virsr versa.
 '''

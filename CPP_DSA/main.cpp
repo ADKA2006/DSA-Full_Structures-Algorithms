@@ -4,8 +4,8 @@
 #include "FixedSizeStackApp.hpp"
 #include "QueueApp.hpp"
 #include "PriorityQueueApp.hpp"
-#include "HeapSortApp.hpp"
-#include "HeapSortClassApp.hpp"
+#include "HeapSortBottomUpApp.hpp"
+#include "HeapSortTopDownApp.hpp"
 
 using namespace std;
 using namespace Demo;  
@@ -18,8 +18,8 @@ int main() {
     FixedSizeStackApp::run();   //Fixed Size Stack
     QueueApp::run();          //Queue
     PriorityQueueApp::run(); //Priority Queue
-    HeapSortApp::run(); //Heap Sort using Priority Queue
-    HeapSortClassApp::run(); //Heap Sort using bottom up heapify
+    HeapSortBottomUpApp::run(); //Heap Sort using Bottom Up Heapify
+    HeapSortTopDownApp::run(); //Heap Sort using Top Down Heapify
 
     
     cout << "\n=== xxxxxxxxxxxxxxxxxxxxxx ===" << endl;
