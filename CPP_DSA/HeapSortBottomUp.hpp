@@ -4,6 +4,13 @@
 #include "Heapify.hpp"
 using namespace std;
 
+// Here we are taking a bottom-up approach where we take an unordered array and transform it into a heap.
+// Time complexity:
+//     |-----> For building the heap: O(n)
+//     |-----> For each extraction: O(log n), for n elements it will be O(n log n)
+//  Overall: O(n log n)
+// Space complexity: O(1)
+
 template <class T>
 class HeapSortBottomUp {
     private:

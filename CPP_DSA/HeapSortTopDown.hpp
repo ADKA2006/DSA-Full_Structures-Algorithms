@@ -3,6 +3,12 @@
 #include "PriorityQueue.hpp"
 using namespace std;
 
+// Here we are maintaining the heap property as and when we insert elements and remove elements
+// Time complexity:
+//     |-----> For building the heap: O(log n) for n elements it will be O(n log n)
+//     |-----> For each extraction: O(log n), for n elements it will be O(n log n)
+//   Overall: O(n log n)
+// Space complexity: O(1)
 
 template <class T>
 class SortArray {
