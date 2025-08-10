@@ -1,7 +1,8 @@
 #ifndef Heapify_hpp
 #define Heapify_hpp
 
-//Here we need the code to make an unsorted array to a heap use the ideas of for(i = (N-1)/2;i>=0;i--) fixDown(i); O(N)
+// Here we are implementing the Heapify process which is used to convert an unordered array into a heap.
+
 template <class T>
 class Heapify {
     private:

@@ -1,6 +1,8 @@
 #ifndef Node_hpp
 #define Node_hpp
 
+// Here we are implementing the code for creating nodes to be used in a linked list.
+
 template <class T>
 class Node {
     public:
