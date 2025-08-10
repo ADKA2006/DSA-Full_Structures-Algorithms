@@ -1,6 +1,6 @@
 # DSA — Data Structures & Algorithms (Multi-language)
 
-![DSA](https://img.shields.io/badge/DSA-multi--language-6f42c1) ![C++](https://img.shields.io/badge/C%2B%2B-Ready-0078D7) ![Python](https://img.shields.io/badge/Python-Planned-ffd343) ![Java](https://img.shields.io/badge/Java-Planned-e11f21)
+![DSA](https://img.shields.io/badge/DSA-multi--language-6f42c1) ![C++](https://img.shields.io/badge/C%2B%2B-Working_On-0078D7) ![Python](https://img.shields.io/badge/Python-Planned-ffd343) ![Java](https://img.shields.io/badge/Java-Planned-e11f21)
 
 ![Build](https://img.shields.io/badge/build-g%2B%2B%20%7C%20CMake-green) ![License](https://img.shields.io/badge/license-MIT-blue)
 
@@ -16,7 +16,6 @@ Note: Each language follows a consistent pattern: core implementation files plus
 ## Repository structure
 
 ```
-.
 ├── CPP_DSA/       # C++ implementations + demos (ready)
 ├── python/        # Python implementations + demos (planned)
 ├── java/          # Java implementations + demos (planned)
