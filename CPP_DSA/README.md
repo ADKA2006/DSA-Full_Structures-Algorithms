@@ -4,7 +4,7 @@
 Small, self-contained C++ implementations and demos of fundamental data structures and heap-based sorting. Each structure has a header with the implementation and a corresponding “App” header that demonstrates usage, keeping demo code separate from core logic.
 
 ## Programming_Language 
-1) [C++](https://img.shields.io/badge/C%2B%2B-11-blue)
+C++ [C++](https://img.shields.io/badge/C%2B%2B-11-blue)
 
 ### Explanation of the repo in detail
 
@@ -102,11 +102,8 @@ cd build
 - Linux, macOS, or Windows with a C++11-capable compiler
 - Optional: CMake 3.10+
 
-## Contributing
-Small improvements, fixes, and new demos are welcome. If you add a new structure, follow the existing pattern: `<Structure>.hpp` for the implementation and `<Structure>App.hpp` with a `Demo::<Structure>App::run()` showcasing usage.
-
 ## License
-Licensed under the MIT License. See LICENSE [`LICENSE`](./LICENSE) for details.
+Licensed under the MIT License. See the [LICENSE](../LICENSE) at the repository root for details.
 
 ## Acknowledgements
 This repository is for learning and demonstration purposes; outputs are printed to the terminal for clarity, with minimal dependencies.
