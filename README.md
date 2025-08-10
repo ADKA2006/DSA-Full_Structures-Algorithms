@@ -2,7 +2,7 @@
 
 ![DSA](https://img.shields.io/badge/DSA-multi--language-6f42c1) ![C++](https://img.shields.io/badge/C%2B%2B-Ready-0078D7) ![Python](https://img.shields.io/badge/Python-Planned-ffd343) ![Java](https://img.shields.io/badge/Java-Planned-e11f21)
 
-![Build](https://img.shields.io/badge/build-g%2B%2B%20%7C%20CMake-green) ![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen) ![License](https://img.shields.io/badge/license-MIT-blue)
+![Build](https://img.shields.io/badge/build-g%2B%2B%20%7C%20CMake-green) ![License](https://img.shields.io/badge/license-MIT-blue)
 
 A practical, growing collection of fundamental data structures and algorithms implemented across multiple languages. Each language folder is self-contained with its own README, examples, and build/run steps.
 
