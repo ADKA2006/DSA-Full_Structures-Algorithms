@@ -21,7 +21,7 @@ void SortArray<T>::heapSort(PriorityQueue<T>& pq) {
     int originalCount = pq.getCount();
     for(int i = originalCount - 1; i >= 0; i--) {
         T temp = pq.getItem(0);
-        pq.getItem(0) = pq.getItem(i);
+        pq.getItem(0) = pq.getItem(i);   // We are getting the reference of the last element
         pq.getItem(i) = temp;
         pq.setCount(i);
         pq.callFixDown(0);   //This will go till the last element which is not sorted.

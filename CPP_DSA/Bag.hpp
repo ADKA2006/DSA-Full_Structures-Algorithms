@@ -1,4 +1,4 @@
-#ifndef Bag_H
+#ifndef Bag_H // BAG_HPP or BAG_H any valid macro name is okay
 #define Bag_H
 #include <iostream>
 #define N 1000   //Whenever we type N it will be 1000

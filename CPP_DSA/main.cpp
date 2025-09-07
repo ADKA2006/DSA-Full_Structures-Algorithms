@@ -6,6 +6,8 @@
 #include "PriorityQueueApp.hpp"
 #include "HeapSortBottomUpApp.hpp"
 #include "HeapSortTopDownApp.hpp"
+#include "BSTApp.hpp"
+
 
 using namespace std;
 using namespace Demo;  
@@ -20,6 +22,7 @@ int main() {
     PriorityQueueApp::run(); //Priority Queue
     HeapSortBottomUpApp::run(); //Heap Sort using Bottom Up Heapify
     HeapSortTopDownApp::run(); //Heap Sort using Top Down Heapify
+    BSTApp::run();           //Binary Search Tree
 
     
     cout << "\n=== xxxxxxxxxxxxxxxxxxxxxx ===" << endl;

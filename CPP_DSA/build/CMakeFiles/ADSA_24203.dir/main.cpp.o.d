@@ -138,4 +138,7 @@ CMakeFiles/ADSA_24203.dir/main.cpp.o: \
  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/HeapSortBottomUp.hpp \
  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/Heapify.hpp \
  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/HeapSortTopDownApp.hpp \
- /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/HeapSortTopDown.hpp
+ /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/HeapSortTopDown.hpp \
+ /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/BSTApp.hpp \
+ /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/BST.hpp \
+ /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/TreeNode.hpp

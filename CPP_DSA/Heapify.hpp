@@ -37,8 +37,8 @@ void Heapify<T>::fixDown(T *items,int k,int n){
 }
 
 template <class T>
-void Heapify<T>::heapify(T *items,int n){
-    for (int i = (n - 1) / 2; i >= 0; i--) {
+void Heapify<T>::heapify(T *items,int n){   
+    for (int i = (n - 1) / 2; i >= 0; i--) {   // Last non-leaf node
         fixDown(items, i, n);
     }
 }

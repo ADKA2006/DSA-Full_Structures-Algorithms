@@ -8,6 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(HEADERS
     Node.hpp
+    TreeNode.hpp
     Heapify.hpp
     Stack.hpp
     StackApp.hpp
@@ -23,6 +24,8 @@ set(HEADERS
     HeapSortBottomUpApp.hpp
     HeapSortTopDown.hpp
     HeapSortTopDownApp.hpp
+    BST.hpp
+    BSTApp.hpp
 )
 
 set(SOURCES
