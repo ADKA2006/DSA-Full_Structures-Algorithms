@@ -6,7 +6,7 @@
 template <class T>
 class Queue{
     private:
-        Node<T>* front;
+        Node<T>* front;   
         Node<T>* back;
         int count;
     public:

@@ -47,7 +47,7 @@ bool Stack<T>::pop(T &value) {
 
 template <class T>
 bool Stack<T>::peek(T &value){
-    if (top != nullptr){
+    if (top != nullptr){    // since value is reference variable it cannot be nullptr and hence we are giving this checking condition
         value = top->data;
         return true;
     }else{
@@ -58,7 +58,7 @@ bool Stack<T>::peek(T &value){
 template <class T>
 int Stack<T>::size(){
     return count;
-}
+} 
 
 template <class T>
 bool Stack<T>::isEmpty(){

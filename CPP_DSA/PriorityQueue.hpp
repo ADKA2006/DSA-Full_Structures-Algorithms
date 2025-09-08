@@ -3,8 +3,8 @@
 #include <iostream>
 using namespace std;
 
-
-//Create a struct data structure with the priority value in the app.WJich is the element
+// Here we are creating a max heap backed priority queue(array)
+// Create a struct data structure with the priority value in the app.Which is the element
 template <class T>
 class PriorityQueue{
     private:

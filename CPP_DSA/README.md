@@ -22,12 +22,14 @@ The purpose of this organisation is to prevent the main function to get cluttere
 
 ### Implemented structures and demos
 - Basic node helper (`Node.hpp`)
+- Tree node helper (`TreeNode.hpp`)
 - Heapify utility (`Heapify.hpp`)
 - Bag (`Bag.hpp`, `BagApp.hpp`)
 - Stack (`Stack.hpp`, `StackApp.hpp`)
 - Fixed-size stack with capacity checks (`FixedSizeStack.hpp`, `FixedSizeStackApp.hpp`)
 - Queue (`Queue.hpp`, `QueueApp.hpp`)
 - Priority queue (heap-backed) (`PriorityQueue.hpp`, `PriorityQueueApp.hpp`)
+- Binary Search Tree (`BST.hpp`, `BSTApp.hpp`)
 - Heap sort (Bottom-Up and Top-Down) (`HeapSortBottomUp.hpp`, `HeapSortBottomUpApp.hpp`, `HeapSortTopDown.hpp`, `HeapSortTopDownApp.hpp`)
 
 
@@ -39,6 +41,8 @@ The entry point `main.cpp` wires all demos together under the `Demo` namespace.
 .
 ├── Bag.hpp
 ├── BagApp.hpp
+├── BST.hpp
+├── BSTApp.hpp
 ├── CMakeLists.txt
 ├── FixedSizeStack.hpp
 ├── FixedSizeStackApp.hpp
@@ -54,6 +58,7 @@ The entry point `main.cpp` wires all demos together under the `Demo` namespace.
 ├── QueueApp.hpp
 ├── Stack.hpp
 ├── StackApp.hpp
+├── TreeNode.hpp
 ├── main.cpp
 ├── build/        # CMake build artifacts (generated)
 └── output/       # Convenience binaries from quick g++ builds
@@ -97,6 +102,15 @@ cd build
 ### Binary tree and BST notes
 - A binary tree node has up to two children; a BST maintains `left < parent < right`.
 - BST search leverages the ordering to prune to one subtree at each step, similar to binary search.
+- The BST implementation uses `TreeNode.hpp` for the underlying node structure.
+- Common BST operations include:
+  - **Insert**: O(log n) average, O(n) worst case (unbalanced tree)
+  - **Search**: O(log n) average, O(n) worst case
+  - **Delete**: O(log n) average, with three cases:
+    1. Leaf node: simply remove the node
+    2. Node with one child: replace node with its child
+    3. Node with two children: replace with inorder successor/predecessor
+- The BST demo (`BSTApp.hpp`) demonstrates insertion, search, traversal, and deletion operations.
 
 ## Requirements
 - Linux, macOS, or Windows with a C++11-capable compiler
@@ -111,6 +125,25 @@ This repository is for learning and demonstration purposes; outputs are printed 
 
 ***Notes***
 ============
+'''
+General Notes
+& is the reference operator(memory address) and * is the dereference operator(gives the value).
+There is Call by value(T ele) and also Call by Reference(T &value)
+
+Use T* when "no object" is a valid state and for tree children. In this we make use of ->.
+Use T& when you require a valid object and want simpler syntax (no ->), but remember references can't be null or reseated.
+Use T*& when the function needs to change which node the caller's pointer points to (e.g., deletion that must set root = nullptr).
+For ownership safety in larger code, consider smart pointers
+
+or 
+Call-by-value (T x): function gets a copy of the whole object. Mutating the parameter doesn't affect the caller's object.
+Call-by-pointer (T* p): function gets a copy of the pointer (an address). You can do p->field = ... to change the original object. Doing p = nullptr; only changes the local copy of the pointer.
+Call-by-reference (T& r): function gets an alias to the object. Mutations affect the caller directly. References cannot be null and cannot be reseated.
+Reference-to-pointer (T*& rp): function gets an alias to the caller's pointer variable. You can both mutate the pointee and reseat the caller's pointer (e.g., set it to nullptr).
+ppointer by reference also check.
+
+//We can also use *& (This will be reference to the pointer rather than a copy of the original pointer which happens in *ptr)
+'''
 
 '''
 Priority Queue Notes
@@ -121,7 +154,7 @@ So in this case the worst case time will be only log(n) for insertion and for re
 If the array has n elements then h = floor[log_2(n)].
 
 
-For basic pratice consider a situtation where the node value is the priority ie this has to maintained to maintain heap like structure then code for the same is given in c++ pratice for now (later the logic will be given as a provate function of the api we are going to implement)
+For basic pratice consider a situtation where the node value is the priority ie this has to maintained to maintain heap like structure then code for the same is given in c++ pratice for now (later the logic will be given as a private function of the api we are going to implement)
 '''
 
 '''
@@ -130,6 +163,15 @@ Binary Tree is either empty or has to have node with *two* child node must which
 
 
 For binary search tree we make use of the binary tree. The left node should be less than the parent node and also the right node has to be greater than the parent. So while searching we are making use of the ideas of binary serch where if the givern value is less than that node we onloy have to search on the lest node and virsr versa.
+
+Update the readme to include the binary search code details(readme of both)
 '''
 
 
+'''
+Binary Search Tree
+deleteNode procedure
+
+1) When the node to be deleted is a leaf node -  so here we have to make the parent next(right or left) to the null ptr.
+2) If the node to be deleted has one child -  make the child has the parent.
+3) If the node to be delete has two childs do the following
