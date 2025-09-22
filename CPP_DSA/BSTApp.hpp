@@ -1,92 +1,90 @@
-#ifndef BSTApp_hpp
-#define BSTApp_hpp
+#ifndef BSTAPP_HPP
+#define BSTAPP_HPP
 #include "BST.hpp"
 #include <iostream>
-using namespace std;
 
-namespace Demo {
+namespace Demo
+{
     class BSTApp {
     private:
-        template <class T>
-        static void printPreOrder(TreeNode<T> *ptr) {
+        template <class K, class V>
+        static void printPreOrder(TreeNode<K,V> *ptr) {
             if (ptr == nullptr) {
-                cout << "nullptr ";
                 return;
             }
-            cout << ptr->data << " ";
-            printPreOrder(ptr->lnode);
-            printPreOrder(ptr->rnode);
+            std::cout << "(" << ptr->key << "," << ptr->value << ") ";
+            printPreOrder(ptr->left);
+            printPreOrder(ptr->right);
         }
         
-        template <class T>
-        static void printInOrder(TreeNode<T> *ptr) {
+        template <class K, class V>
+        static void printInOrder(TreeNode<K,V> *ptr) {
             if (ptr == nullptr) {
-                cout << "nullptr ";
                 return;
             }
-            printInOrder(ptr->lnode);
-            cout << ptr->data << " ";
-            printInOrder(ptr->rnode);
+            printInOrder(ptr->left);
+            std::cout << "(" << ptr->key << "," << ptr->value << ") ";
+            printInOrder(ptr->right);
         }
         
-        template <class T>
-        static void printPostOrder(TreeNode<T> *ptr) {
+        template <class K, class V>
+        static void printPostOrder(TreeNode<K,V> *ptr) {
             if (ptr == nullptr) {
-                cout << "nullptr ";
                 return;
             }
-            printPostOrder(ptr->lnode);
-            printPostOrder(ptr->rnode);
-            cout << ptr->data << " ";
+            printPostOrder(ptr->left);
+            printPostOrder(ptr->right);
+            std::cout << "(" << ptr->key << "," << ptr->value << ") ";
         }
         
     public:
         static void run() {
-            cout << "\n=== Binary Search Tree ===" << endl;
+            std::cout << "\n=== Binary Search Tree BSTApp ===" << std::endl;
             
-            BST<int> bst;
+            BST<int,std::string> bst;
+            // inserting numbers as key and the correspoding english words as values for demo.
+            std::cout << "Inserting key-value pairs: (50,'Fifty'), (200,'TwoHundred'), (30,'Thirty'), (70,'Seventy'), (60,'Sixty')" << std::endl;
+            bst.insert(50, "Fifty");
+            bst.insert(200, "TwoHundred");
+            bst.insert(30, "Thirty");
+            bst.insert(70, "Seventy");
+            bst.insert(60, "Sixty");
             
-            cout << "Inserting values: 50, 200, 30, 70, 60" << endl;
-            bst.insert(50);
-            bst.insert(200);
-            bst.insert(30);
-            bst.insert(70);
-            bst.insert(60);
+            TreeNode<int,std::string> *ptr = bst.getRoot();
             
-            TreeNode<int> *ptr = bst.getRoot();
-            
-            cout << "Pre-order traversal:" << endl;
+            std::cout << "Pre-order traversal:" << std::endl;
             printPreOrder(ptr); // Root -> Left -> Right
-            cout << endl;
+            std::cout << std::endl;
             
-            cout << "In-order traversal:" << endl;   
+            std::cout << "In-order traversal:" << std::endl;   
             printInOrder(ptr); // Left -> Root -> Right
-            cout << endl;
+            std::cout << std::endl;
             
-            cout << "Post-order traversal:" << endl;
+            std::cout << "Post-order traversal:" << std::endl;
             printPostOrder(ptr); // Left -> Right -> Root
-            cout << endl;
+            std::cout << std::endl;
             
-            cout << "Searching for value 70: " << (bst.search(70) ? "Found" : "Not Found") << endl;
-            cout << "Searching for value 100: " << (bst.search(100) ? "Found" : "Not Found") << endl;
+            std::string value;
+            std::cout << "Searching for key 70: " << (bst.search(70, value) ? "Found - " + value : "Not Found") << std::endl;
+            std::cout << "Searching for key 100: " << (bst.search(100, value) ? "Found - " + value : "Not Found") << std::endl;
             
-            cout << "Size of BST: " << bst.size() << endl;
-            cout << "Is BST empty? " << (bst.isEmpty() ? "Yes" : "No") << endl;
+            std::cout << "Size of BST: " << bst.size() << std::endl;
+            std::cout << "Is BST empty? " << (bst.isEmpty() ? "Yes" : "No") << std::endl;
             
-            cout << "Deleting value 30" << endl;
-            if (bst.deleteNode(30)) {
-                cout << "Successfully deleted 30" << endl;
+            std::cout << "Deleting key 30" << std::endl;
+            if (bst.deleteKey(30)) {
+                std::cout << "Successfully deleted key 30" << std::endl;
             } else {
-                cout << "Could not delete 30 (not found)" << endl;
+                std::cout << "Could not delete key 30 (not found)" << std::endl;
             }
             
-            cout << "In-order traversal after deletion:" << endl;
+            std::cout << "In-order traversal after deletion:" << std::endl;
             printInOrder(ptr);
-            cout << endl;
+            std::cout << std::endl;
             
-            cout << "Size of BST after deletion: " << bst.size() << endl;
+            std::cout << "Size of BST after deletion: " << bst.size() << std::endl;
             
-            cout << "=== Binary Search Tree Complete ===" << endl;
+            std::cout << "=== Binary Search Tree Complete ===" << std::endl;
         }
     };
 }

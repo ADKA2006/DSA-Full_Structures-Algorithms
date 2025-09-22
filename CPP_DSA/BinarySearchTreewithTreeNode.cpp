@@ -29,11 +29,13 @@ class BST {
         BST();
         ~BST();
         void insert(T value);
-        TreeNode<T> *getRoot();  //We can also use *& (This will be reference to the pointer rather than a copy of the original pointer which happens in *ptr)
+        bool deleteNode(T value);
+        TreeNode<T> *getRoot();  
         bool search(T value);
         void preOrder(TreeNode<T> *ptr);
         void inOrder(TreeNode<T> *ptr);
         void postOrder(TreeNode<T> *ptr);
+        bool deleteNode(T elt,TreeNode<T> &node);
 };
 
 template <class T>
@@ -50,7 +52,7 @@ template <class T>
 TreeNode<T>* BST<T>::getRoot() {
     return root;
 }
-
+// Make the insert function recursive
 template <class T>
 void BST<T>::insert(T elt) {
     TreeNode<T> *node = new TreeNode<T>(elt,nullptr,nullptr);
@@ -73,6 +75,76 @@ void BST<T>::insert(T elt) {
             parent->lnode = node;
         }
     }    
+}
+
+template <class T>
+bool BST<T>::deleteNode(T value){
+    TreeNode<T> *ptr = root;
+    TreeNode<T> *par = nullptr;
+
+    // Search for the node to delete
+    while (ptr != nullptr && ptr->data != value) {
+        par = ptr;
+        if (value < ptr->data) ptr = ptr->lnode;
+        else ptr = ptr->rnode;
+    }
+
+    if (ptr == nullptr) return false; // Not found
+
+    // Case 1: Node to be deleted is having no children (leaf)
+    if (ptr->lnode == nullptr && ptr->rnode == nullptr) {
+        if (par == nullptr) {
+            // Deleting root node
+            delete ptr;
+            root = nullptr;
+        } else {
+            if (par->lnode == ptr) par->lnode = nullptr;
+            else par->rnode = nullptr;
+            delete ptr;
+        }
+    }
+    // Case 2: Node to be deleted is having only left child
+    else if (ptr->rnode == nullptr) {
+        if (par == nullptr) {
+            TreeNode<T>* temp = ptr;
+            root = ptr->lnode;
+            delete temp;
+        } else {
+            if (par->lnode == ptr) par->lnode = ptr->lnode;
+            else par->rnode = ptr->lnode;
+            delete ptr;
+        }
+    }
+    // Case 3: Node to be deleted is having only right child
+    else if (ptr->lnode == nullptr) {
+        if (par == nullptr) {
+            TreeNode<T>* temp = ptr;
+            root = ptr->rnode;
+            delete temp;
+        } else {
+            if (par->lnode == ptr) par->lnode = ptr->rnode;
+            else par->rnode = ptr->rnode;
+            delete ptr;
+        }
+    }
+    // Case 4: Node to be deleted is having two children
+    else {
+        // Smallest value in the right subtree
+        TreeNode<T>* succPar = ptr;
+        TreeNode<T>* succ = ptr->rnode;
+        while (succ->lnode != nullptr) {
+            succPar = succ;
+            succ = succ->lnode;
+        }
+        ptr->data = succ->data;
+        if (succPar->lnode == succ) {
+            succPar->lnode = succ->rnode;
+        } else {
+            succPar->rnode = succ->rnode;
+        }
+        delete succ;
+    }
+    return true;
 }
 
 template <class T>

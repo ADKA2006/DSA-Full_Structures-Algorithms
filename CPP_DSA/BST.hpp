@@ -1,159 +1,240 @@
-#ifndef BinarySearchTree_hpp
-#define BinarySearchTree_hpp
+#ifndef BST_HPP
+#define BST_HPP
 #include "TreeNode.hpp"
 
-template <class T>
-class BST {
-    private:
-        TreeNode<T> *root;
-        int count;
-    public:
-        BST();
-        ~BST();
-        void insert(T value);
-        bool deleteNode(T value);
-        TreeNode<T> *getRoot();  
-        bool search(T value);
-        int size();
-        bool isEmpty();
+/*
+ *The tree is meant to be used as the underlying representation
+ *for dictionary implementation. Each node therefore holds 
+ *a (key,value) pair. * 
+ */
+
+template<class K, class V>
+class BST{
+
+private:
+  TreeNode<K,V> *root;
+  int count; 
+  void insertrec(K key, V value, TreeNode<K,V> *&t);
+  bool remove(K key, TreeNode<K,V> *&node);
+  void PrintTree(TreeNode<K,V> *t);
+  void DeleteTree(TreeNode<K,V> *t);
+  
+public:
+  BST();
+  ~BST();//destructor
+  void insert(K key, V value);
+  void insertrec(K key, V value);
+  bool search(K key, V &value);
+  bool deleteKey(K key);
+  void PrintTree();
+  TreeNode<K,V> *getRoot();
+  int size();
+  bool isEmpty();
+  
 };
 
-template <class T>
-BST<T>::BST() {
-    root = nullptr;
-    count = 0;
+template<class K, class V>
+BST<K,V>::BST()
+{
+  root = nullptr;
+  count = 0; // Initialise count
 }
 
-template <class T>
-BST<T>::~BST() {
-    root = nullptr;
+template<class K, class V>
+void BST<K,V>::DeleteTree(TreeNode<K,V> *t)
+{
+  if (t != nullptr)
+    {
+      DeleteTree(t->left);
+      DeleteTree(t->right);
+      delete t;
+    }
 }
 
-template <class T>
-TreeNode<T>* BST<T>::getRoot() {
+template<class K, class V>
+BST<K,V>::~BST()
+{
+  DeleteTree(root);
+}
+
+template<class K, class V>
+TreeNode<K,V>* BST<K,V>::getRoot() {
     return root;
 }
 
-template <class T>
-void BST<T>::insert(T elt) {
-    TreeNode<T> *node = createTreeNode(elt);
-    if (root == nullptr) {
-        root = node;
-        count++;
-    } else {
-        TreeNode<T> *ptr = root;
-        TreeNode<T> *parent = nullptr;
-        while (ptr != nullptr){
-            parent = ptr;
-            if (elt >= ptr->data){
-                ptr = ptr->rnode;
-            } else {
-                ptr = ptr->lnode;
-            }
-        }
-        if (elt >= parent->data) {
-            parent->rnode = node;
-        } else {
-            parent->lnode = node;
-        }
-        count++;
-    }    
+// Normal insertion
+template<class K, class V>
+void BST<K,V>::insert(K key, V value)
+{
+  TreeNode<K,V> *node = new TreeNode<K,V>(key, value, nullptr, nullptr);
+  if (root == nullptr) {
+      root = node;
+      count++;
+  } else {
+      TreeNode<K,V> *ptr = root;
+      TreeNode<K,V> *parent = nullptr;
+      while (ptr != nullptr){
+          parent = ptr;
+          if (key >= ptr->key){
+              ptr = ptr->right;
+          } else {
+              ptr = ptr->left;
+          }
+      }
+      if (key >= parent->key) {
+          parent->right = node;
+      } else {
+          parent->left = node;
+      }
+      count++;
+  }    
 }
 
-template <class T>
-bool BST<T>::deleteNode(T value){
-    TreeNode<T> *ptr = root;
-    TreeNode<T> *par = nullptr;
-
-    // Search for the node to delete
-    while (ptr != nullptr && ptr->data != value) {
-        par = ptr;
-        if (value < ptr->data) ptr = ptr->lnode;
-        else ptr = ptr->rnode;
-    }
-
-    if (ptr == nullptr) return false; // Not found
-
-    // Case 1: Node to be deleted is having no children (leaf)
-    if (ptr->lnode == nullptr && ptr->rnode == nullptr) {
-        if (par == nullptr) {
-            // Deleting root node
-            delete ptr;
-            root = nullptr;
-        } else {
-            if (par->lnode == ptr) par->lnode = nullptr;
-            else par->rnode = nullptr;
-            delete ptr;
-        }
-    }
-    // Case 2: Node to be deleted is having only left child
-    else if (ptr->rnode == nullptr) {
-        if (par == nullptr) {
-            TreeNode<T>* temp = ptr;
-            root = ptr->lnode;
-            delete temp;
-        } else {
-            if (par->lnode == ptr) par->lnode = ptr->lnode;
-            else par->rnode = ptr->lnode;
-            delete ptr;
-        }
-    }
-    // Case 3: Node to be deleted is having only right child
-    else if (ptr->lnode == nullptr) {
-        if (par == nullptr) {
-            TreeNode<T>* temp = ptr;
-            root = ptr->rnode;
-            delete temp;
-        } else {
-            if (par->lnode == ptr) par->lnode = ptr->rnode;
-            else par->rnode = ptr->rnode;
-            delete ptr;
-        }
-    }
-    // Case 4: Node to be deleted is having two children
-    else {
-        // Smallest value in the right subtree
-        TreeNode<T>* succPar = ptr;
-        TreeNode<T>* succ = ptr->rnode;
-        while (succ->lnode != nullptr) {
-            succPar = succ;
-            succ = succ->lnode;
-        }
-        ptr->data = succ->data;
-        if (succPar->lnode == succ) {
-            succPar->lnode = succ->rnode;
-        } else {
-            succPar->rnode = succ->rnode;
-        }
-        delete succ;
-    }
-    count--;
-    return true;
+// Recurssive insertion
+template<class K, class V>
+void BST<K,V>::insertrec(K key, V value, TreeNode<K,V> *&t)
+{
+  if (t == nullptr) {
+      t = new TreeNode<K,V>(key, value, nullptr, nullptr);
+      count++;
+  } else if (key < t->key) {
+      insertrec(key, value, t->left);
+  } else if (key >= t->key) {
+      insertrec(key, value, t->right);
+  }
 }
 
-template <class T>
-bool BST<T>::search(T value){
-    TreeNode<T> *ptr = root;
-    while (ptr != nullptr){
-        if (ptr->data == value) {
-            return true;
-        } else if (value < ptr->data) {
-            ptr = ptr->lnode;
-        } else {
-            ptr = ptr->rnode;
-        }
-    }
-    return false;
+template<class K, class V>
+void BST<K,V>::insertrec(K key, V value)
+{
+  insertrec(key, value, root);
 }
 
-template <class T>
-int BST<T>::size(){
+
+template<class K, class V>
+bool BST<K,V>::search(K key, V &value)
+{
+  TreeNode<K,V> *ptr = root;
+  while (ptr != nullptr){
+      if (ptr->key == key) {
+          value = ptr->value; // Store the value in reference parameter
+          return true;
+      } else if (key < ptr->key) {
+          ptr = ptr->left;
+      } else {
+          ptr = ptr->right;
+      }
+  }
+  return false;
+}
+
+template<class K, class V>
+int BST<K,V>::size(){
     return count;
 }
 
-template <class T>
-bool BST<T>::isEmpty(){
+template<class K, class V>
+bool BST<K,V>::isEmpty(){
     return (count == 0) ? true : false;
+}
+
+/*
+template<class K, class V>
+void BST<K,V>::PrintTree()
+{
+  PrintTree(root);
+}
+
+template<class K, class V>
+void BST<K,V>::PrintTree(TreeNode<K,V> *t)
+{
+  if (t != nullptr) {
+      PrintTree(t->left);
+      std::cout << "(" << t->key << ", " << t->value << ") ";
+      PrintTree(t->right);
+  }
+}
+*/
+
+
+template<class K, class V>
+bool BST<K,V>::remove(K key, TreeNode<K,V> *&node)
+{
+  TreeNode<K,V> *ptr = root;
+  TreeNode<K,V> *par = nullptr;
+
+  // Search for the node to delete
+  while (ptr != nullptr && ptr->key != key) {
+      par = ptr;
+      if (key < ptr->key) ptr = ptr->left;
+      else ptr = ptr->right;
+  }
+
+  if (ptr == nullptr) return false; // Not found
+
+  // Case 1: Node to be deleted is having no children (leaf)
+  if (ptr->left == nullptr && ptr->right == nullptr) {
+      if (par == nullptr) {
+          // Deleting root node
+          delete ptr;
+          root = nullptr;
+      } else {
+          if (par->left == ptr) par->left = nullptr;
+          else par->right = nullptr;
+          delete ptr;
+      }
+  }
+  // Case 2: Node to be deleted is having only left child
+  else if (ptr->right == nullptr) {
+      if (par == nullptr) {
+          TreeNode<K,V>* temp = ptr;
+          root = ptr->left;
+          delete temp;
+      } else {
+          if (par->left == ptr) par->left = ptr->left;
+          else par->right = ptr->left;
+          delete ptr;
+      }
+  }
+  // Case 3: Node to be deleted is having only right child
+  else if (ptr->left == nullptr) {
+      if (par == nullptr) {
+          TreeNode<K,V>* temp = ptr;
+          root = ptr->right;
+          delete temp;
+      } else {
+          if (par->left == ptr) par->left = ptr->right;
+          else par->right = ptr->right;
+          delete ptr;
+      }
+  }
+  // Case 4: Node to be deleted is having two children
+  else {
+      // Smallest value in the right subtree (inorder successor)
+      TreeNode<K,V>* succPar = ptr;
+      TreeNode<K,V>* succ = ptr->right;
+      while (succ->left != nullptr) {
+          succPar = succ;
+          succ = succ->left;
+      }
+      ptr->key = succ->key;
+      ptr->value = succ->value;
+      if (succPar->left == succ) {
+          succPar->left = succ->right;
+      } else {
+          succPar->right = succ->right;
+      }
+      delete succ;
+  }
+  count--;
+  return true;
+}
+
+
+template<class K, class V>
+bool BST<K,V>::deleteKey(K key)
+{
+  return remove(key, root);
 }
 
 #endif

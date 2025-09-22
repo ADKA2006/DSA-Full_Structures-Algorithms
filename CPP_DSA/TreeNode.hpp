@@ -1,19 +1,33 @@
 #ifndef TreeNode_hpp
 #define TreeNode_hpp
 
+template<class K, class V>
+struct TreeNode{
+  K key;
+  V value;
+  TreeNode *left, *right;
+
+  TreeNode(K key, V value,  TreeNode *left, TreeNode *right)
+  {
+    this->value = value;
+    this->key = key;
+    this->left = left;
+    this->right = right;
+  } 
+};
+
 template <class T>
-class TreeNode {
+class SingleValTreeNode {
     public:
         T data;
-        TreeNode<T>* lnode;
-        TreeNode<T>* rnode;
-
+        SingleValTreeNode<T>* lnode;
+        SingleValTreeNode<T>* rnode;
 };
 
 
 template <class T>
-TreeNode<T> *createTreeNode(T value) {
-    TreeNode<T> *newNode = new TreeNode<T>();
+SingleValTreeNode<T> *createTreeNode(T value) {
+    SingleValTreeNode<T> *newNode = new SingleValTreeNode<T>();
     newNode->data = value;
     newNode->lnode = nullptr;
     newNode->rnode = nullptr;
@@ -22,8 +36,8 @@ TreeNode<T> *createTreeNode(T value) {
 }
 
 template <class T>
-TreeNode<T> *createTreeNode(T value,TreeNode<T> *lnode,TreeNode<T> *rnode) {
-    TreeNode<T> *newNode = new TreeNode<T>();
+SingleValTreeNode<T> *createTreeNode(T value,SingleValTreeNode<T> *lnode,SingleValTreeNode<T> *rnode) {
+    SingleValTreeNode<T> *newNode = new SingleValTreeNode<T>();
     newNode->data = value;
     newNode->lnode = lnode;
     newNode->rnode = rnode;

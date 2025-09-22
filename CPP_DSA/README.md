@@ -41,6 +41,7 @@ The entry point `main.cpp` wires all demos together under the `Demo` namespace.
 .
 ├── Bag.hpp
 ├── BagApp.hpp
+├── BinarySearchTreewithTreeNode.cpp
 ├── BST.hpp
 ├── BSTApp.hpp
 ├── CMakeLists.txt
@@ -162,7 +163,7 @@ Binary Tree Node Notes
 Binary Tree is either empty or has to have node with *two* child node must which (ie from the node it again point (two) to a binary which are distinct..)Check the cpp for the practice node is.
 
 
-For binary search tree we make use of the binary tree. The left node should be less than the parent node and also the right node has to be greater than the parent. So while searching we are making use of the ideas of binary serch where if the givern value is less than that node we onloy have to search on the lest node and virsr versa.
+For binary search tree we make use of the binary tree. The left node should be less than the parent node and also the right node has to be greater than the parent. So while searching we are making use of the ideas of binary serch where if the givern value is less than that node we onloy have to search on the lest node and virse versa.
 
 Update the readme to include the binary search code details(readme of both)
 '''
@@ -174,4 +175,107 @@ deleteNode procedure
 
 1) When the node to be deleted is a leaf node -  so here we have to make the parent next(right or left) to the null ptr.
 2) If the node to be deleted has one child -  make the child has the parent.
-3) If the node to be delete has two childs do the following
+3) If the node to be delete has two childs do the following:
+   a) Find the inorder successor (smallest value in the right subtree) OR inorder predecessor (largest value in the left subtree)
+   b) Replace the node's value with the successor's/predecessor's value
+   c) Delete the successor/predecessor node (which will have at most one child, making it case 1 or 2)
+   
+   Algorithm for inorder successor approach:
+   - Go to the right child of the node to be deleted
+   - Keep going left until you find a node with no left child
+   - This node is the inorder successor
+   - Copy its value to the node to be deleted
+   - Delete the successor node using case 1 or 2
+
+Catalinic formula is (2n)!/(n! * (n + 1)!)
+'''
+
+
+''' 
+Graphs
+It is represented as G = (V,E)
+V = Set of nodes/vertices ===> V = {P1,P2,P3,P4...}
+E = Set of pair of nodes/vertices ie edges ===> {{P1,P4},{P2,P3}}
+
+In undirected graphs 
+  - Pair wise relation is symmetric
+  - E : Collection of sets of pairs of vertices
+
+In Directed graphs
+  - Pairwise relation may/may not be symmetric
+  - E: Collection of ordered pairs of vertices
+
+Adjacency
+--------
+
+Two nodes are said to be adjacent to eachother if there is a edge connecting the twoo nodes.
+ie Two nodes U and V are said to be adjacent to eachother if an edge connecting between them is present.
+
+Neighbours of a node is the set of its adjacent nodes
+
+Path
+-----
+It is a sequence of nodes V1,V2,V3.....Vk-1,Vk where {V,Vi+1} \belongs to E \forall i = 1,2.....k-1
+
+Simple Path
+-----------
+Path in whuich all the nodes are distinct.
+
+Cyclic Path
+-----------
+The simple path (except the first and last nodes) form a cyclic/ring like structure.  ie V1....Vk-1 are distanct & V1 = Vk
+
+Length of tthe path
+--------------------
+The number of nodes in the path is the length.
+
+
+Assumption in our case
+----------------------
+ - Here we considering uni edge graph ie only one edge between given two nodes / pairs. There are also multi edge graphs.
+   In simple terms there is atmost one  edge between a given pair of nodes
+ - There are no self loops in the graphs.
+
+
+Reprsentation of the graph
+--------------------------
+-> Adjacency matrix
+--------------------
+ |V| x |V| ie the size of the matrix is V x V. It is also binary. 
+[ 1 2 3 4
+1 0 1 1 1
+2 1 0 0 0
+3 1 0 0 0
+4 1 0 0 0]
+
+This is the representation for a grpah in which 1 is connected to 2 3 4 and nodes 2 3 4 are not connected to any other nodes ony 1.
+Space complexity is |V|**2
+
+For finding the neighbours of a given vertex the time complexity will be theta(V) ie since we need the entire row to find the adjacent nodes where the row size will be V.
+
+Making use of adjacency matrix is not suitable since as the number of nodes increase the time complexity also increases proportionaly.
+
+-> Adjacency List
+-----------------
+Here each node has a list associated with it to store its neighbours.
+Here space complexity of O(|V| + |E|)
+This is better than adjacency matrix becaue |E| < |V|**2 (max is V*(v-1)/2 in adj.list which is smaller than (|V|**2)/2)
+
+For finding the neighbours of a given vertex the time complexity will be theta(#number of neighbours(degree of the node)) ie since we need the entire row to find the adjacent nodes where the row size will be V.
+
+Graph Traversal
+---------------
+
+A connected graph is a graph in which there is a path from any a given node to any other node in the graph.
+
+Connected component of a graph is the a subgraph which is connected.
+
+1) Given a graph G = (V,E), how many connected componet are there in the graph.
+2) Path with the least cost.
+3) Given a pair of nodes, what is the distance between the nodes(ie the length of the sortest path.) # Here if the nodes are in different sub graphs then it will be infinity (ie no path exist)
+
+In BFS the runtime is equal to the number of edges(see)
+O(|V| + |E|)
+
+L is the visited set.
+Find the distancec of a node from teh S ===> Find which L[i] is that and i will be the answer.
