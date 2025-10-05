@@ -23,6 +23,15 @@ ADSA_24203_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 ADSA_24203_SOURCE_DIR:STATIC=/home/adka/ADKA Files/Coding Files/DSA/C++/ADSA_24203
 
+//Value Computed by CMake
+Advaith_Krishna_203_BINARY_DIR:STATIC=/home/adka/ADKA Files/Coding Files/DSA/C++/ADSA_24203/build
+
+//Value Computed by CMake
+Advaith_Krishna_203_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+Advaith_Krishna_203_SOURCE_DIR:STATIC=/home/adka/ADKA Files/Coding Files/DSA/C++/ADSA_24203
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 

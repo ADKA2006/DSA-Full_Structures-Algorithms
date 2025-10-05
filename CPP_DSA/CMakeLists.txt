@@ -26,6 +26,8 @@ set(HEADERS
     HeapSortTopDownApp.hpp
     BST.hpp
     BSTApp.hpp
+    Graph.hpp
+    GraphApp.hpp
 )
 
 set(SOURCES

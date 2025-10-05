@@ -1,4 +1,4 @@
-CMakeFiles/ADSA_24203.dir/main.cpp.o: \
+CMakeFiles/Advaith_Krishna_203.dir/main.cpp.o: \
  /home/adka/ADKA\ Files/Coding\ Files/DSA/C++/ADSA_24203/main.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/14/iostream \
  /usr/include/c++/14/bits/requires_hosted.h \

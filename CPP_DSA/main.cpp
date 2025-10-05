@@ -7,7 +7,7 @@
 #include "HeapSortBottomUpApp.hpp"
 #include "HeapSortTopDownApp.hpp"
 #include "BSTApp.hpp"
-
+#include "GraphApp.hpp"
 
 using namespace std;
 using namespace Demo;  
@@ -23,6 +23,7 @@ int main() {
     HeapSortBottomUpApp::run(); //Heap Sort using Bottom Up Heapify
     HeapSortTopDownApp::run(); //Heap Sort using Top Down Heapify
     BSTApp::run();           //Binary Search Tree
+    GraphApp::run();         //Graph
 
     
     cout << "\n=== xxxxxxxxxxxxxxxxxxxxxx ===" << endl;
