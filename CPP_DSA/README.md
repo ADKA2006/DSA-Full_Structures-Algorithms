@@ -34,6 +34,8 @@ The purpose of this organisation is to prevent the main function to get cluttere
 ├── CMakeLists.txt
 ├── FixedSizeStack.hpp
 ├── FixedSizeStackApp.hpp
+├── Graph.hpp
+├── GraphApp.hpp
 ├── Heapify.hpp
 ├── HeapSortBottomUp.hpp
 ├── HeapSortBottomUpApp.hpp
